@@ -94,51 +94,42 @@ Finally, a crucial part of my literature review will be identifying gaps in curr
 ## 4.2 Data Analysis and Preparation
 ### 4.2.1 Financial Distress Prediction Dataset
 #### 1. Data Description and Initial Exploration
-   - The dataset used is in the CSV `content/Financial Distress.csv`
-     
-**Data Description:**
-
-The Financial Distress Prediction dataset is a comprehensive collection of financial metrics for various companies over multiple time periods. The primary goal is to predict the financial distress of companies based on historical financial data. The dataset contains 3672 entries and 86 columns, each representing different financial metrics and identifiers.
-
-**Dataset Structure:**
- - **Rows:** 3672
- - **Columns:** 86
-
-**Categorization of Columns:**
-1. **Identifiers:**
-   - `Company`: Unique identifier for each company.
-   - `Time`: Time period identifier.
-2. **Target Variable:**
-   - `Financial Distress`: The primary target variable indicating the financial distress status of the company.
-3. **Financial Metrics:**
-   - `x1` to `x83`: A series of 83 financial metrics and ratios capturing various aspects of the company's financial health.
-
-**Data Types:**
-The dataset contains two primary data types:
-- **Integer (int64):** 5 columns (Company, Time, x80, x82, x83)
-- **Float (float64):** 81 columns (Financial Distress, x1 to x79, x81)
-
-**Summary Statistics:**
-
-Key statistics for the dataset include the mean, standard deviation, and ranges for each metric, providing insights into the distribution and variability of the financial data.
+   - The dataset used is in the CSV `content/Financial Distress.csv`     
+   - **Data Description:**
+     - The Financial Distress Prediction dataset is a comprehensive collection of financial metrics for various companies over multiple time periods. The primary goal is to predict the financial distress of companies based on historical financial data. The dataset contains 3672 entries and 86 columns, each representing different financial metrics and identifiers.
+   - **Dataset Structure:**
+     - **Rows:** 3672
+     - **Columns:** 86
+- **Categorization of Columns:**
+     1. **Identifiers:**
+        - `Company`: Unique identifier for each company.
+        - `Time`: Time period identifier.
+     2. **Target Variable:**
+        - `Financial Distress`: The primary target variable indicating the financial distress status of the company.
+     3. **Financial Metrics:**
+        - `x1` to `x83`: A series of 83 financial metrics and ratios capturing various aspects of the company's financial health.
+- **Data Types:**
+   The dataset contains two primary data types:
+   - **Integer (int64):** 5 columns (Company, Time, x80, x82, x83)
+   - **Float (float64):** 81 columns (Financial Distress, x1 to x79, x81)
+- **Summary Statistics:**
+  - Key statistics for the dataset include the mean, standard deviation, and ranges for each metric, providing insights into the distribution and variability of the financial data.
 
 #### 2. Time Series Analysis
-The time series analysis involves plotting the `Financial Distress` variable over time for selected companies. This helps in understanding the temporal patterns and trends in financial distress.
+- The time series analysis involves plotting the `Financial Distress` variable over time for selected companies. This helps in understanding the temporal patterns and trends in financial distress.
 
 ![image](https://github.com/user-attachments/assets/47f32c67-3e10-4638-b7b3-2710f5010d22)
 
-**Plot Description:**
-
-The line plot shows the financial distress levels of five selected companies over different time periods. Each company's financial distress trajectory is distinct, with some companies experiencing significant fluctuations, while others exhibit more stable patterns. This variability underscores the importance of time series analysis in predicting financial distress.
+- **Plot Description:**
+  - The line plot shows the financial distress levels of five selected companies over different time periods. Each company's financial distress trajectory is distinct, with some companies experiencing significant fluctuations, while others exhibit more stable patterns. This variability underscores the importance of time series analysis in predicting financial distress.
 
 #### 3. Imbalance Handling
-Initially, the `Financial Distress` variable exhibited class imbalance, which can lead to biased model predictions. To address this, the Synthetic Minority Over-sampling Technique (SMOTE) was applied to balance the dataset by generating synthetic samples for underrepresented classes.
+- Initially, the `Financial Distress` variable exhibited class imbalance, which can lead to biased model predictions. To address this, the Synthetic Minority Over-sampling Technique (SMOTE) was applied to balance the dataset by generating synthetic samples for underrepresented classes.
 
 ![image](https://github.com/user-attachments/assets/95f998e2-cf8d-4765-b40d-9693239402aa) ![image](https://github.com/user-attachments/assets/b6cf9356-41a5-41a6-9c89-f2d3264085ca)
 
-**Distribution of Discretized Financial Distress**
-
-The initial distribution of the discretized `Financial Distress` variable was highly imbalanced, with a majority of instances falling into certain distress categories. The application of SMOTE balanced the distribution, ensuring that each category is equally represented, which is crucial for training robust and unbiased predictive models.
+- **Distribution of Discretized Financial Distress**
+  - The initial distribution of the discretized `Financial Distress` variable was highly imbalanced, with a majority of instances falling into certain distress categories. The application of SMOTE balanced the distribution, ensuring that each category is equally represented, which is crucial for training robust and unbiased predictive models.
 
 #### 4. Feature Engineering
 Feature engineering involved creating new variables to improve the predictive power of the dataset:
@@ -149,6 +140,62 @@ Feature engineering involved creating new variables to improve the predictive po
   - Introduced lagged versions of the `Financial Distress` variable, capturing temporal dependencies and trends.
 - **Normalization:**
   -  Applied MinMax scaling to normalize the range of selected features, ensuring they are on a comparable scale for modeling.
+ 
+#### 5. Data Quality Check
+A comprehensive data quality check was performed to ensure the reliability of the dataset:
+
+- **Missing Values:**
+   - Initially, there were no missing values. However, creating lag features introduced missing values, which were handled appropriately.
+- **Duplicates:**
+   - No duplicate rows were found in the dataset.
+- **Outliers:**
+   - Outliers were identified in various numerical columns, which could influence the model’s performance if not addressed.
+- **Categorical Data:**
+   - Ensured categorical variables had appropriate data types and filled missing values using the mode.
+
+### 4.2.2 Credit Risk Dataset
+#### 1. Data Loading and Initial Exploration
+   - The dataset used is in the CSV `content/credit_risk_dataset.csv`
+   - **Feature Exploration:**
+     - The Credit Risk Dataset contains information on various attributes of individuals applying for loans, including their demographic details, employment information, loan characteristics, and credit history.
+   - **Data Quality Check:**
+     - The dataset was checked for missing values, duplicates, and outliers, and necessary preprocessing steps were applied.
+#### 2. Feature Engineering
+
+To enhance the predictive power of the dataset, additional features were engineered:
+
+- **Debt-to-Income Ratio:**
+  - This new feature was created to provide insight into the individual's debt burden relative to their income.
+- **Normalization:**
+  - Applied MinMax scaling to normalize the range of selected features.
+
+#### 3. Additional Data Quality Check
+
+The dataset was cleaned and enhanced by creating a new feature, `Debt_to_Income_Ratio`, and normalizing the relevant columns. Outliers were identified, and categorical columns were optimized for memory usage.
+
+### 4.2.3 Credit Card Fraud Detection Dataset
+
+#### 1. Data Loading and Initial Exploration
+   - The dataset used is in the CSV `content/cc_info.csv` and `content/transactions.csv`
+   - **Understanding Transaction Data:**
+     - The Credit Card Fraud Detection dataset consists of transaction records linked to credit cards. The data exploration involved checking for missing values and understanding the dataset structure.
+
+#### 2. Analyzing Transaction Amount Distribution
+This analysis shows that most transactions are small, with only a few larger transactions, indicating a skewed distribution that could be critical in detecting fraud.
+![image](https://github.com/user-attachments/assets/e4565056-dd2e-435e-986e-5b594d9ed4e1)
+
+#### 3. Analyzing Transactions Over Time
+This analysis reveals trends in transaction volumes and amounts, identifying periods of high activity that could correlate with increased fraud risk.
+![image](https://github.com/user-attachments/assets/565e86a7-117f-4679-a370-862bcaa9a07a)
+![image](https://github.com/user-attachments/assets/ecd0f43b-7d69-4486-97e0-e64ac0d8c65e)
+
+#### 4. Graph-Based Techniques
+
+By constructing a transaction network graph, we explored relationships between credit cards, identifying key players and potential anomalies based on centrality measures.
+![image](https://github.com/user-attachments/assets/cdcec3fc-c4f7-401c-b896-c632e74b9c94)
+
+  - **Summary**
+    - This section integrates detailed data analysis and preprocessing for each of the three datasets (Financial Distress Prediction, Credit Risk, and Credit Card Fraud Detection). It covers the entire workflow from data loading and initial exploration, through feature engineering and data quality checks, to advanced analysis techniques such as time series analysis and graph-based anomaly detection. This comprehensive approach ensures the datasets are well-prepared for subsequent machine learning modeling and analysis, fulfilling the project's goals of predicting financial distress, assessing credit risk, and detecting fraud.
 
 ## 4.3 Developing Machine Learning Models
 ## 4.4 Automating Regulatory Reporting and System Integration
