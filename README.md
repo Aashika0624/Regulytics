@@ -76,7 +76,7 @@ Recent advances in machine learning present significant opportunities for automa
    - In the context of strict regulations like the UK Money Laundering Regulations and PSD2, effective fraud detection is paramount. I will investigate how deep learning advancements, particularly Recurrent Neural Networks (RNNs), have enhanced real-time fraud detection. Additionally, I plan to explore graph-based methods for anomaly detection in transaction networks and the potential of hybrid models combining unsupervised and supervised learning techniques to detect previously unknown fraud patterns (Akoglu et al., 2015; Nguyen et al., 2019; Roy et al., 2020).
      
 
-### **3.1.3 Identify Gaps in Current Research**
+### **4.1.3 Identify Gaps in Current Research**
 
 Finally, a crucial part of my literature review will be identifying gaps in current research. This will involve:
 
@@ -92,6 +92,45 @@ Finally, a crucial part of my literature review will be identifying gaps in curr
 - Identification of research gaps that I will address in the dissertation, forming the foundation for developing a more effective and compliant system.
   
 ## 4.2 Data Analysis and Preparation
+### 4.2.1 Financial Distress Prediction Dataset
+#### 1. Data Description and Initial Exploration
+   - The dataset used is in the CSV `content/Financial Distress.csv`
+     
+**Data Description:**
+
+The Financial Distress Prediction dataset is a comprehensive collection of financial metrics for various companies over multiple time periods. The primary goal is to predict the financial distress of companies based on historical financial data. The dataset contains 3672 entries and 86 columns, each representing different financial metrics and identifiers.
+
+**Dataset Structure:**
+ - **Rows:** 3672
+ - **Columns:** 86
+
+**Categorization of Columns:**
+1. **Identifiers:**
+   - `Company`: Unique identifier for each company.
+   - `Time`: Time period identifier.
+2. **Target Variable:**
+   - `Financial Distress`: The primary target variable indicating the financial distress status of the company.
+3. **Financial Metrics:**
+   - `x1` to `x83`: A series of 83 financial metrics and ratios capturing various aspects of the company's financial health.
+
+**Data Types:**
+The dataset contains two primary data types:
+- **Integer (int64):** 5 columns (Company, Time, x80, x82, x83)
+- **Float (float64):** 81 columns (Financial Distress, x1 to x79, x81)
+
+**Summary Statistics:**
+
+Key statistics for the dataset include the mean, standard deviation, and ranges for each metric, providing insights into the distribution and variability of the financial data.
+
+#### 2. Time Series Analysis
+The time series analysis involves plotting the `Financial Distress` variable over time for selected companies. This helps in understanding the temporal patterns and trends in financial distress.
+
+![image](https://github.com/user-attachments/assets/47f32c67-3e10-4638-b7b3-2710f5010d22)
+
+**Plot Description:**
+
+The line plot shows the financial distress levels of five selected companies over different time periods. Each company's financial distress trajectory is distinct, with some companies experiencing significant fluctuations, while others exhibit more stable patterns. This variability underscores the importance of time series analysis in predicting financial distress.
+
 ## 4.3 Developing Machine Learning Models
 ## 4.4 Automating Regulatory Reporting and System Integration
 ## 4.5 System Validation
