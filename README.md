@@ -32,6 +32,12 @@ Use the following code to install the dependencies:
 !pip install pandas matplotlib imbalanced-learn scikit-learn networkx xgboost
 ```
 
+All the datasets can be found in the zip file at the following locations:
+- `/content/Financial Distress.csv`
+- `/content/credit_risk_dataset.csv`
+- `/content/cc_info.csv`
+- `/content/transactions.csv`
+
 # 2. Overview
 ## 2.1 Aim
 The project aims to address the challenges associated with manual, time-consuming, and error-prone regulatory reporting and compliance processes within financial institutions. The system being developed will facilitate the efficient identification of compliance risks and ensure that financial institutions can adapt quickly to regulatory changes without significant manual intervention.
