@@ -1,5 +1,13 @@
 # Regulytics
 
+```
+Author                   : Aashika Elavarasan 
+Student ID               : 230356836
+Supervisor               : Dr. Ying He
+Program of Study         : MSc Data Science and Artificial Intelligence
+Completion Date          : 22/08/2024
+```
+
 Regulytics is a "Data-Driven Regulatory Reporting and Compliance Analytics System" machine learning-driven system that automates regulatory reporting processes and identifies potential compliance risks within financial institutions.
 
 # Table of Contents
