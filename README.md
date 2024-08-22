@@ -8,7 +8,7 @@ Program of Study         : MSc Data Science and Artificial Intelligence
 Completion Date          : 22/08/2024
 ```
 
-Regulytics is a "Data-Driven Regulatory Reporting and Compliance Analytics System" machine learning-driven system that automates regulatory reporting processes and identifies potential compliance risks within financial institutions.
+Regulytics (also known as the `Data-Driven Regulatory Reporting and Compliance Analytics System`) is a machine learning-driven system that automates regulatory reporting processes and identifies potential compliance risks within financial institutions.
 
 # Table of Contents
 
