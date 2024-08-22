@@ -50,7 +50,10 @@ The project aims to address the challenges associated with manual, time-consumin
 
 # 4. Methodology
 ## 4.1 Literature Review and Regulatory Research
+The first step in my project is to conduct a thorough literature review and regulatory research to ensure that the developed system aligns with the current regulatory standards and effectively addresses compliance needs. This process involves several key activities:
+
 ### 4.1.1 Understanding Regulatory Frameworks
+Given the complexity of the financial sector and its focus on maintaining stability, preventing fraud, and ensuring the health of financial institutions, it is essential to adhere to various regulations. These regulations often involve time-consuming tasks prone to errors, which is what my project aims to tackle by automating the reporting and compliance processes.
 ![image](https://github.com/user-attachments/assets/90ff4391-6904-4ef5-bba1-4f6d4041daa4)
 
 1. **Key Regulations**
@@ -61,15 +64,32 @@ The project aims to address the challenges associated with manual, time-consumin
    - Summarize key requirements related to reporting and compliance standards.
 
 ### 4.1.2 Reviewing Academic and Industry Literature
-1. **Financial Distress Prediction**
-   - Review recent machine learning models used for financial distress prediction.
-2. **Credit Risk Assessment**
-   - Explore advancements in credit risk modeling.
-3. **Fraud Detection**
-   - Review real-time and hybrid fraud detection models.
+Recent advances in machine learning present significant opportunities for automating and enhancing reporting and compliance analytics. My literature review will focus on three main areas:
+
+1. **Financial Distress Prediction:**
+   - Regulations such as Basel III and guidelines from the Prudential Regulation Authority (PRA) highlight the importance of stress testing and capital reserves to mitigate distress risks. I will examine recent research showing how advanced machine learning methods, including Random Forests, Gradient Boosting Machines, and Deep Neural Networks, can significantly improve prediction accuracy. Addressing imbalanced datasets, a common issue in distress prediction, will also be a key focus, with techniques like SMOTE and ADASYN offering potential solutions (Li & Sun, 2022; He et al., 2020; Wang et al., 2021).
+
+2. **Credit Risk Assessment:**
+   - Frameworks like Basel III, IFRS 9, and FCA guidelines mandate robust credit risk management. I plan to delve into recent advancements in this area, particularly those utilizing machine learning techniques like XGBoost and deep learning architectures. These methods have proven more effective than traditional regression models in predicting credit risk. Additionally, I will explore how interpretability techniques like SHapley Additive exPlanations (SHAP) and LIME can ensure transparency in these models, which is crucial for regulatory compliance (Berg et al., 2020; Brown & Mues, 2019; Lundberg & Lee, 2017).
+
+3. **Fraud Detection:**
+   - In the context of strict regulations like the UK Money Laundering Regulations and PSD2, effective fraud detection is paramount. I will investigate how deep learning advancements, particularly Recurrent Neural Networks (RNNs), have enhanced real-time fraud detection. Additionally, I plan to explore graph-based methods for anomaly detection in transaction networks and the potential of hybrid models combining unsupervised and supervised learning techniques to detect previously unknown fraud patterns (Akoglu et al., 2015; Nguyen et al., 2019; Roy et al., 2020).
      
-**Deliverable:**
-  - A comprehensive literature review that outlines regulatory requirements and relevant academic findings.  
+
+### **3.1.3 Identify Gaps in Current Research**
+
+Finally, a crucial part of my literature review will be identifying gaps in current research. This will involve:
+
+1. **Regulatory Integration:**  
+   - Assessing how well current predictive models integrate regulatory requirements such as those from Basel III, IFRS 9, and SOX.
+2. **Real-Time Capabilities:**  
+   - Evaluating the ability of existing models to handle real-time data, an essential feature for both compliance reporting and fraud detection.
+3. **Scalability and Adaptability:**  
+   - Determining the scalability of current solutions to manage large datasets and adapt to evolving patterns, ensuring that the system I develop can handle increasing data demands.
+
+**Deliverables:**
+- A comprehensive literature review document summarizing regulatory requirements and recent advancements in financial distress prediction, credit risk assessment, and fraud detection.
+- Identification of research gaps that I will address in the dissertation, forming the foundation for developing a more effective and compliant system.
   
 ## 4.2 Data Analysis and Preparation
 ## 4.3 Developing Machine Learning Models
