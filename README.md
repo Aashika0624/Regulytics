@@ -197,6 +197,8 @@ By constructing a transaction network graph, we explored relationships between c
   - **Summary**
     - This section integrates detailed data analysis and preprocessing for each of the three datasets (Financial Distress Prediction, Credit Risk, and Credit Card Fraud Detection). It covers the entire workflow from data loading and initial exploration, through feature engineering and data quality checks, to advanced analysis techniques such as time series analysis and graph-based anomaly detection. This comprehensive approach ensures the datasets are well-prepared for subsequent machine learning modeling and analysis, fulfilling the project's goals of predicting financial distress, assessing credit risk, and detecting fraud.
 
+Finally, outliers and missing data values are addressed, and a final check is conducted to ensure there are no duplicates and that the data types are correct, making the dataset ready for modeling.
+
 ## 4.3 Developing Machine Learning Models
 ## 4.4 Automating Regulatory Reporting and System Integration
 ## 4.5 System Validation
