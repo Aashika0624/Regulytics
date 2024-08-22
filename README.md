@@ -131,6 +131,25 @@ The time series analysis involves plotting the `Financial Distress` variable ove
 
 The line plot shows the financial distress levels of five selected companies over different time periods. Each company's financial distress trajectory is distinct, with some companies experiencing significant fluctuations, while others exhibit more stable patterns. This variability underscores the importance of time series analysis in predicting financial distress.
 
+#### 3. Imbalance Handling
+Initially, the `Financial Distress` variable exhibited class imbalance, which can lead to biased model predictions. To address this, the Synthetic Minority Over-sampling Technique (SMOTE) was applied to balance the dataset by generating synthetic samples for underrepresented classes.
+
+![image](https://github.com/user-attachments/assets/95f998e2-cf8d-4765-b40d-9693239402aa) ![image](https://github.com/user-attachments/assets/b6cf9356-41a5-41a6-9c89-f2d3264085ca)
+
+**Distribution of Discretized Financial Distress**
+
+The initial distribution of the discretized `Financial Distress` variable was highly imbalanced, with a majority of instances falling into certain distress categories. The application of SMOTE balanced the distribution, ensuring that each category is equally represented, which is crucial for training robust and unbiased predictive models.
+
+#### 4. Feature Engineering
+Feature engineering involved creating new variables to improve the predictive power of the dataset:
+
+- **Debt-to-Equity Ratio:**
+  - Calculated as the ratio of `x1` (a financial metric) to `x2` (another financial metric), providing a crucial indicator of a company's financial leverage.
+- **Lag Features:**
+  - Introduced lagged versions of the `Financial Distress` variable, capturing temporal dependencies and trends.
+- **Normalization:**
+  -  Applied MinMax scaling to normalize the range of selected features, ensuring they are on a comparable scale for modeling.
+
 ## 4.3 Developing Machine Learning Models
 ## 4.4 Automating Regulatory Reporting and System Integration
 ## 4.5 System Validation
