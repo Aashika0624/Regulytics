@@ -2,8 +2,6 @@
 
 ```
 Author                   : Aashika Elavarasan 
-Student ID               : 230356836
-Supervisor               : Dr. Ying He
 Program of Study         : MSc Data Science and Artificial Intelligence
 Completion Date          : 22/08/2024
 ```
